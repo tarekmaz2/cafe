@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menü | Nutella Rose</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=DM+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header class="header">
+        <nav class="nav-container">
+            <a href="index.html" class="logo">
+                <img src="img/logo.png" alt="Nutella Rose Logo" class="logo-img">
+                <div class="logo-text">Nutella <span>Rose</span></div>
+            </a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="menu.html" class="active">Menü</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Kontakt</a></li>
+            </ul>
+            <button class="hamburger" id="hamburger" aria-label="Menü öffnen" onclick="toggleMenu()">
+                <span></span><span></span><span></span>
+            </button>
+        </nav>
+    </header>
+    <div class="mobile-overlay" id="mobileOverlay" onclick="toggleMenu()"></div>
+
+    <section class="section-padding" style="margin-top: 60px;">
+        <div style="text-align: center; margin-bottom: 30px;">
+            <h1 style="font-size: 4rem;">Unsere Karte</h1>
+        </div>
+
+        <div class="category-scroller" id="catNav"></div>
+        <div class="product-grid" id="menuGrid"></div>
+    </section>
+
+    <footer class="footer footer-dark">
+        <div class="footer-dark-inner">
+            <div class="footer-dark-brand">
+                <div class="logo-text" style="font-size: 2.8rem; color: white;">Nutella <span>Rose</span></div>
+                <p>Handgemachte Crêpes, luxuriöse Desserts<br>und feinster Barista-Kaffee in Berlin-Neukölln.</p>
+                <div class="footer-social">
+                    <a href="https://instagram.com" target="_blank" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://facebook.com" target="_blank" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="https://tiktok.com" target="_blank" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+                </div>
+            </div>
+            <div class="footer-dark-col">
+                <h4>Navigation</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="menu.html">Menü</a></li>
+                    <li><a href="about.html">Über uns</a></li>
+                    <li><a href="contact.html">Kontakt</a></li>
+                </ul>
+            </div>
+            <div class="footer-dark-col">
+                <h4>Öffnungszeiten</h4>
+                <ul>
+                    <li>Mo – Fr: 08:00 – 20:00</li>
+                    <li>Sa – So: 09:00 – 21:00</li>
+                </ul>
+                <h4 style="margin-top: 2rem;">Kontakt</h4>
+                <ul>
+                    <li><i class="fa-solid fa-location-dot"></i> Karl-Marx-Str. 65, Berlin</li>
+                    <li><i class="fa-solid fa-phone"></i> 030 / 123 456 78</li>
+                    <li><i class="fa-solid fa-envelope"></i> hallo@nutellarose.de</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-dark-bottom">
+            <p>&copy; 2026 Nutella Rose Café Berlin. Alle Rechte vorbehalten.</p>
+            <div>
+                <a href="#">Impressum</a>
+                <a href="#">Datenschutz</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const categories = ['Waffeln', 'Crepes', 'Pancakes', 'Milkshakes', 'Kaffee'];
+        
+        const products = [
+            { name: 'Dubai Chocolate Crêpe', cat: 'Crepes', price: '7.50', img: 'img/crepes/oreo-fettuccine-crepe.png', desc: 'Gefüllt mit Pistaziencreme und Kadayif.' },
+            { name: 'Sushi Crepe Plus', cat: 'Crepes', price: '7.50', img: 'img/crepes/sushi-crepe-plus.png', desc: 'Gefüllt mit Pistaziencreme und Kadayif.' },
+            { name: 'Classic Nutella Waffle', cat: 'Waffeln', price: '6.20', img: 'img/crepes.png', desc: 'Die klassische Waffel mit viel Liebe.' },
+            { name: 'Classic Nutella Waffle', cat: 'Waffeln', price: '6.20', img: 'img/crepes.png', desc: 'Die klassische Waffel mit viel Liebe.' },
+            { name: 'Classic Nutella Waffle', cat: 'Waffeln', price: '6.20', img: 'img/crepes.png', desc: 'Die klassische Waffel mit viel Liebe.' },
+            { name: 'Classic Nutella Waffle', cat: 'Waffeln', price: '6.20', img: 'img/crepes.png', desc: 'Die klassische Waffel mit viel Liebe.' },
+            { name: 'Classic Nutella Waffle', cat: 'Waffeln', price: '6.20', img: 'img/crepes.png', desc: 'Die klassische Waffel mit viel Liebe.' },
+            { name: 'Classic Nutella Waffle', cat: 'Waffeln', price: '6.20', img: 'img/crepes.png', desc: 'Die klassische Waffel mit viel Liebe.' },
+            { name: 'Classic Nutella Waffle', cat: 'Waffeln', price: '6.20', img: 'img/crepes.png', desc: 'Die klassische Waffel mit viel Liebe.' },
+            { name: 'Classic Nutella Waffle', cat: 'Waffeln', price: '6.20', img: 'img/crepes.png', desc: 'Die klassische Waffel mit viel Liebe.' },
+            { name: 'Ruby Chocolate Shake', cat: 'Milkshakes', price: '5.90', img: 'img/home_milkshake.png', desc: 'Natürlich rosa und unglaublich cremig.' },
+            { name: 'Signature Rose Latte', cat: 'Kaffee', price: '4.80', img: 'image_923724.jpg', desc: 'Espresso mit sanftem Rosen-Aroma.' }
+        ];
+
+        let activeCat = new URLSearchParams(window.location.search).get('cat') || 'Waffeln';
+
+        function render() {
+            document.getElementById('catNav').innerHTML = categories.map(c => `
+                <button class="cat-btn ${c === activeCat ? 'active' : ''}" onclick="filter('${c}')">${c}</button>
+            `).join('');
+
+            const filtered = products.filter(p => p.cat === activeCat);
+            document.getElementById('menuGrid').innerHTML = filtered.length ? filtered.map(p => `
+                <div class="product-card">
+                    <div class="product-img"><img src="${p.img}" alt="${p.name}"></div>
+                    <div class="product-details">
+                        <h3>${p.name}</h3>
+                        <p style="color: #666; margin-bottom: 10px;">${p.desc}</p>
+                        <div class="price">${p.price} €</div>
+                    </div>
+                </div>
+            `).join('') : '<p style="grid-column: 1/-1; text-align: center;">Bald verfügbar...</p>';
+        }
+
+        function filter(c) {
+            activeCat = c;
+            render();
+            window.history.pushState({}, '', '?cat=' + c);
+        }
+
+        function toggleMenu() {
+            const nav = document.getElementById('navLinks');
+            const btn = document.getElementById('hamburger');
+            const overlay = document.getElementById('mobileOverlay');
+            nav.classList.toggle('open');
+            btn.classList.toggle('open');
+            overlay.classList.toggle('show');
+        }
+
+        render();
+    </script>
+</body>
+</html>

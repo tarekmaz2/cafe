@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kontakt | Nutella Rose Berlin</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header class="header">
+        <nav class="nav-container">
+            <a href="index.html" class="logo">
+                <img src="img/logo.png" alt="Nutella Rose Logo" class="logo-img">
+                <div class="logo-text">Nutella <span>Rose</span></div>
+            </a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="menu.html">Menü</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html" class="active">Kontakt</a></li>
+            </ul>
+            <button class="hamburger" id="hamburger" aria-label="Menü öffnen" onclick="toggleMenu()">
+                <span></span><span></span><span></span>
+            </button>
+        </nav>
+    </header>
+    <div class="mobile-overlay" id="mobileOverlay" onclick="toggleMenu()"></div>
+
+    <section class="section-padding" style="margin-top: 80px;">
+        <div style="text-align: center; margin-bottom: 60px;">
+            <span style="color: var(--primary); font-weight: 700; text-transform: uppercase; letter-spacing: 2px; font-size: 1.2rem;">Kontakt</span>
+            <h1 style="font-size: 4.5rem; margin-top: 1rem;">Wir freuen uns auf Sie</h1>
+        </div>
+
+        <div style="display: flex; flex-direction: column; gap: 40px; max-width: 900px; margin: 0 auto;">
+            <!-- Info-Elemente nebeneinander (Desktop) / untereinander (Mobile) -->
+            <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px;" class="contact-info-grid">
+                <div class="product-card" style="padding: 3rem; display: flex; flex-direction: column; align-items: flex-start; gap: 15px;">
+                    <div class="feature-icon" style="padding: 18px;"><i class="fa-solid fa-location-dot"></i></div>
+                    <div>
+                        <h3 style="font-size: 1.8rem; margin-bottom: 8px;">Adresse</h3>
+                        <p style="font-size: 1.5rem; color: var(--text-muted); line-height: 1.7;">Karl-Marx-Straße 65<br>12043 Berlin-Neukölln</p>
+                    </div>
+                </div>
+                <div class="product-card" style="padding: 3rem; display: flex; flex-direction: column; align-items: flex-start; gap: 15px;">
+                    <div class="feature-icon" style="padding: 18px;"><i class="fa-solid fa-phone"></i></div>
+                    <div>
+                        <h3 style="font-size: 1.8rem; margin-bottom: 8px;">Telefon</h3>
+                        <p style="font-size: 1.5rem; color: var(--text-muted);">030 / 123 456 78</p>
+                    </div>
+                </div>
+                <div class="product-card" style="padding: 3rem; display: flex; flex-direction: column; align-items: flex-start; gap: 15px;">
+                    <div class="feature-icon" style="padding: 18px;"><i class="fa-solid fa-clock"></i></div>
+                    <div>
+                        <h3 style="font-size: 1.8rem; margin-bottom: 8px;">Öffnungszeiten</h3>
+                        <p style="font-size: 1.5rem; color: var(--text-muted); line-height: 1.7;">Montag – Sonntag<br>08:00 – 20:00 Uhr</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Karte darunter -->
+            <div style="border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-premium); height: 420px; width: 100%;">
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2429.623456789!2d13.435!3d52.482!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNTLCsDI4JzU1LjIiTiAxM8KwMjYnMDYuMCJF!5e0!3m2!1sde!2sde!4v1234567890" 
+                    width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy">
+                </iframe>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer footer-dark">
+        <div class="footer-dark-inner">
+            <div class="footer-dark-brand">
+                <div class="logo-text" style="font-size: 2.8rem; color: white;">Nutella <span>Rose</span></div>
+                <p>Handgemachte Crêpes, luxuriöse Desserts<br>und feinster Barista-Kaffee in Berlin-Neukölln.</p>
+                <div class="footer-social">
+                    <a href="https://instagram.com" target="_blank" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://facebook.com" target="_blank" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="https://tiktok.com" target="_blank" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+                </div>
+            </div>
+            <div class="footer-dark-col">
+                <h4>Navigation</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="menu.html">Menü</a></li>
+                    <li><a href="about.html">Über uns</a></li>
+                    <li><a href="contact.html">Kontakt</a></li>
+                </ul>
+            </div>
+            <div class="footer-dark-col">
+                <h4>Öffnungszeiten</h4>
+                <ul>
+                    <li>Mo – Fr: 08:00 – 20:00</li>
+                    <li>Sa – So: 09:00 – 21:00</li>
+                </ul>
+                <h4 style="margin-top: 2rem;">Kontakt</h4>
+                <ul>
+                    <li><i class="fa-solid fa-location-dot"></i> Karl-Marx-Str. 65, Berlin</li>
+                    <li><i class="fa-solid fa-phone"></i> 030 / 123 456 78</li>
+                    <li><i class="fa-solid fa-envelope"></i> hallo@nutellarose.de</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-dark-bottom">
+            <p>&copy; 2026 Nutella Rose Café Berlin. Alle Rechte vorbehalten.</p>
+            <div>
+                <a href="#">Impressum</a>
+                <a href="#">Datenschutz</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+    function toggleMenu() {
+        const nav = document.getElementById('navLinks');
+        const btn = document.getElementById('hamburger');
+        const overlay = document.getElementById('mobileOverlay');
+        nav.classList.toggle('open');
+        btn.classList.toggle('open');
+        overlay.classList.toggle('show');
+    }
+    </script>
+
+</body>
+</html>

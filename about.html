@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Über uns | Nutella Rose Berlin</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header class="header">
+        <nav class="nav-container">
+            <a href="index.html" class="logo">
+                <img src="img/logo.png" alt="Nutella Rose Logo" class="logo-img">
+                <div class="logo-text">Nutella <span>Rose</span></div>
+            </a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="menu.html">Menü</a></li>
+                <li><a href="about.html" class="active">About</a></li>
+                <li><a href="contact.html">Kontakt</a></li>
+            </ul>
+            <button class="hamburger" id="hamburger" aria-label="Menü öffnen" onclick="toggleMenu()">
+                <span></span><span></span><span></span>
+            </button>
+        </nav>
+    </header>
+    <div class="mobile-overlay" id="mobileOverlay" onclick="toggleMenu()"></div>
+
+    <section class="section-padding" style="margin-top: 60px;">
+        <div class="category-card" style="box-shadow: none; border: none; background: transparent;">
+            <div class="category-info" style="padding-left: 0;">
+                <span style="color: var(--primary); font-weight: 700; text-transform: uppercase; letter-spacing: 2px; font-size: 1.2rem;">Unsere Geschichte</span>
+                <h2 style="font-size: 4.5rem; margin: 1.5rem 0;">Herzlich willkommen im Herzen Berlins</h2>
+                <p style="font-size: 1.8rem; line-height: 1.8;">
+                    Das <strong>Nutella Rose Café</strong> ist mehr als nur ein Ort für erstklassigen Kaffee. In der pulsierenden Karl-Marx-Straße haben wir eine Oase für Genießer geschaffen, die das Besondere suchen. 
+                    <br><br>
+                    Wir vereinen handwerkliche Tradition mit modernen Dessert-Trends. Von unserer berühmten <strong>Dubai-Schokolade</strong> bis hin zu feinster <strong>belgischer Schokolade</strong> – bei uns wird jede Kreation mit höchster Präzision und Leidenschaft zubereitet.
+                </p>
+                <div class="features-grid" style="margin-top: 4rem; grid-template-columns: 1fr 1fr; max-width: 500px;">
+                    <div class="feature-item">
+                        <div class="feature-icon"><i class="fa-solid fa-star"></i></div>
+                        <div><strong>Premium Qualität</strong><br><span>Belgische Schokolade</span></div>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon"><i class="fa-solid fa-location-dot"></i></div>
+                        <div><strong>Berlin Style</strong><br><span>Neukölln Vibes</span></div>
+                    </div>
+                </div>
+            </div>
+            <div class="category-image">
+                <img src="img/Fenster3.png" alt="Über uns Atmosphäre" style="border-radius: var(--radius-lg);">
+            </div>
+        </div>
+    </section>
+
+    <section class="section-padding" style="background: var(--surface);">
+        <div style="text-align: center; margin-bottom: 50px;">
+            <h2 style="font-size: 3.5rem;">Ein Blick in unser Café</h2>
+            <p style="color: var(--text-muted); font-size: 1.6rem;">Luxuriöses Ambiente trifft auf süße Kunstwerke.</p>
+        </div>
+        
+        <div class="gallery-masonry">
+            <div class="gallery-item"><img src="image_923724.jpg" alt="Café Atmosphäre"></div>
+            <div class="gallery-item"><img src="image_92375c.jpg" alt="Dubai Schokolade"></div>
+            <div class="gallery-item"><img src="image_923724.jpg" alt="Handgemachte Crêpes"></div>
+            <div class="gallery-item"><img src="image_92375c.jpg" alt="Espresso Moment"></div>
+            <div class="gallery-item"><img src="image_923724.jpg" alt="Events"></div>
+        </div>
+    </section>
+
+    <section class="section-padding">
+        <div style="text-align: center; margin-bottom: 50px;">
+            <h2 style="font-size: 3.5rem;">Stimmen unserer Gäste</h2>
+        </div>
+        <div class="product-grid" style="grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));">
+            <div class="product-card" style="padding: 3rem; text-align: left;">
+                <div style="color: var(--primary); margin-bottom: 1.5rem;">
+                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                </div>
+                <p style="font-style: italic; font-size: 1.5rem; margin-bottom: 2rem;">"Das beste Café in Berlin! Die Dubai-Schokolade ist einfach unbeschreiblich, und das Team ist unglaublich freundlich."</p>
+                <div style="display: flex; align-items: center; gap: 15px;">
+                    <div style="width: 45px; height: 45px; border-radius: 50%; background: var(--primary-light); display: flex; align-items: center; justify-content: center; color: var(--primary); font-weight: 700;">S</div>
+                    <div><strong>Sarah M.</strong><br><span style="font-size: 1.2rem; color: var(--text-muted);">Stammkundin</span></div>
+                </div>
+            </div>
+            <div class="product-card" style="padding: 3rem; text-align: left;">
+                <div style="color: var(--primary); margin-bottom: 1.5rem;">
+                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                </div>
+                <p style="font-style: italic; font-size: 1.5rem; margin-bottom: 2rem;">"Perfekt für Dates! Die Atmosphäre ist romantisch, der Kaffee hochwertig und die Kuchen hausgemacht."</p>
+                <div style="display: flex; align-items: center; gap: 15px;">
+                    <div style="width: 45px; height: 45px; border-radius: 50%; background: var(--primary-light); display: flex; align-items: center; justify-content: center; color: var(--primary); font-weight: 700;">M</div>
+                    <div><strong>Marcus L.</strong><br><span style="font-size: 1.2rem; color: var(--text-muted);">Besucher</span></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer footer-dark">
+        <div class="footer-dark-inner">
+            <div class="footer-dark-brand">
+                <div class="logo-text" style="font-size: 2.8rem; color: white;">Nutella <span>Rose</span></div>
+                <p>Handgemachte Crêpes, luxuriöse Desserts<br>und feinster Barista-Kaffee in Berlin-Neukölln.</p>
+                <div class="footer-social">
+                    <a href="https://instagram.com" target="_blank" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://facebook.com" target="_blank" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="https://tiktok.com" target="_blank" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+                </div>
+            </div>
+            <div class="footer-dark-col">
+                <h4>Navigation</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="menu.html">Menü</a></li>
+                    <li><a href="about.html">Über uns</a></li>
+                    <li><a href="contact.html">Kontakt</a></li>
+                </ul>
+            </div>
+            <div class="footer-dark-col">
+                <h4>Öffnungszeiten</h4>
+                <ul>
+                    <li>Mo – Fr: 08:00 – 20:00</li>
+                    <li>Sa – So: 09:00 – 21:00</li>
+                </ul>
+                <h4 style="margin-top: 2rem;">Kontakt</h4>
+                <ul>
+                    <li><i class="fa-solid fa-location-dot"></i> Karl-Marx-Str. 65, Berlin</li>
+                    <li><i class="fa-solid fa-phone"></i> 030 / 123 456 78</li>
+                    <li><i class="fa-solid fa-envelope"></i> hallo@nutellarose.de</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-dark-bottom">
+            <p>&copy; 2026 Nutella Rose Café Berlin. Alle Rechte vorbehalten.</p>
+            <div>
+                <a href="#">Impressum</a>
+                <a href="#">Datenschutz</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+    function toggleMenu() {
+        const nav = document.getElementById('navLinks');
+        const btn = document.getElementById('hamburger');
+        const overlay = document.getElementById('mobileOverlay');
+        nav.classList.toggle('open');
+        btn.classList.toggle('open');
+        overlay.classList.toggle('show');
+    }
+    </script>
+
+</body>
+</html>
